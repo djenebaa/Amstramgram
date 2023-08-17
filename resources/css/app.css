@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.my-custom-text {
+    fill: #000;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+
+}
+
+/* Bar loader css */
+
+     
+
+.spinner-container
+{
+    
+    z-index: 99;
+    position: fixed;
+    width: 60px;
+    padding: 10px;
+    top: 80%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    left: 50%;
+    margin-top: -100px; 
+    margin-left: -50px;
+    border-radius: 0.5rem;
+
+}
+
+.spinner-container p
+{
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+
+#upperbar
+
+{
+    animation: upperBar linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    transform-box: border-box;
+}
+
+#middlebar
+
+{
+    animation: middlebar ease;
+    
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    transform-box: border-box;
+    
+}
+
+#bottombar
+{
+    animation: bottombar ease;
+    
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    transform-box: border-box;
+}
+
+@keyframes upperBar {
+    0%
+    {
+     transform: translateX(0px);
+    }
+    50%
+    {
+        transform: translateX(15px);
+    }
+   100%
+    {
+     transform: translateX(0px);
+    }
+}
+
+
+@keyframes middlebar {
+    0%
+    {
+     transform: translateX(-20px);
+    }
+    50%
+    {
+        transform: translateX(0px);
+    }
+   100%
+    {
+     transform: translateX(-20px);
+    }
+
+    
+}
+
+@keyframes bottombar {
+    0%
+    {
+     transform: translateX(0px);
+    }
+    50%
+    {
+        transform: translateX(10px);
+    }
+   100%
+    {
+     transform: translateX(0px);
+    }
+
+
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(167, 152, 152, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
